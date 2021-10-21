@@ -168,7 +168,7 @@ _Exemplo: Algoritmo da [Torre de Hanói](https://www.lavanguardia.com/vida/20181
 <br>
 Abaixo você pode verificar o gráfico de comparação de cada complexidade de algoritmos:
 
-<div align="center"><img src="assets/images/mainReadMe2" alt="Gráfico de Comparação de Complexidades de Algoritmos"></div>
+<div align="center"><img src="assets/images/mainReadMe2.png" alt="Gráfico de Comparação de Complexidades de Algoritmos"></div>
 
 <br>
 <p align="center">Agora que já temos a base do assunto, nas pastas do repositório temos o estudo mais detalhado de tipos de algoritmos e estrututuras de dados. Obrigado por ler até aqui! 😄</p>
