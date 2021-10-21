@@ -14,6 +14,14 @@
   <a href="#complexidade-algoritmos">Complexidade de Algoritmos</a>
 </p>
 
+### Conteúdos do Repositório 📝
+- [ ] Algoritmos
+- [ ] Listas
+- [ ] Filas
+- [ ] Pilhas
+- [ ] Árvores
+- [ ] Tabela Hash
+
 <h2 id="conceitos-basicos">Conceitos Básicos 🤔</h2>
 
 ### O que é um Algoritmo?
