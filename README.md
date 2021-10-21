@@ -35,3 +35,17 @@ Realizar uma análise **precisa** de um algoritmo é uma tarefa complicada pois 
 - Muitos algoritmos não são bem compreendidos.
 
 <p align="justify">Entretanto, ainda é feita a análise de algoritmos a partir de modelos matemáticos simples, que ignoram o hardware e o software escolhidos para executar o programa, e nos trazem uma previsão do tempo de execução do algoritmo.</p>
+
+<p align="justify">Para melhor ilustrar essa situação, imagine 5 algoritmos diferentes feitos para realizar um mesmo tipo de situação (A1, A2, A3, A4 e A5). Podemos calcular a eficiência de cada um desses algoritmos a partir de uma função que calcula o número de operações que um determinado algoritmo efetua para <strong>N</strong> entradas. Essa função é chamada <em>Tĸ(n)</em>.</p>
+
+<p align="justify">Em que <em>T</em> significa o Tempo de Execução do Algoritmo. <em>k</em> é a variável que indica qual é o algoritmo (A1, A2, A3, A4 ou A5) e o <em>n</em> indica a quantidade de entradas.</p>
+
+A imagem abaixo ilustra o funcionamento desses algoritmos:
+
+**OBS** - Considere que cada operação leva 1ms para ser efetuada.
+
+<div align="center"><img align="center" src="assets/images/mainReadMe.png" alt="Ilustração do Funcionamento dos Algoritmos"></div>
+<br>
+<p align="justify">Note que para um tamanho de entrada igual a 512 (n = 512), para resolver um mesmo tipo de problema, existem algoritmos que demoram 10¹³ séculos para terminar a execução (algoritmo A5) e outros que demorariam 0.512s para completá-la (algoritmo A1). Perceber essa diferença só foi possível analisando os algoritmos, e assim, podemos escolher o melhor deles para resolver uma determinada situação.</p>
+
+<p align="justify">Repare também que, na mesma tabela, logo abaixo das letras dos algoritmos, temos algumas funções como <strong>n</strong>, <strong>nlog n</strong>, <strong>n²</strong>, <strong>n³</strong> e <strong>2^n</strong>. Essas funções representam a Complexidade de cada um desses algoritmos, estudaremos ela logo em seguida!</p>
