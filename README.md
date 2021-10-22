@@ -82,6 +82,7 @@ _Exemplo: Um algoritmo que faz uma busca sequencial em uma lista de N entradas. 
 ### Como medir a Complexidade de um Algoritmo?
 
 <p align="justify">Os algoritmos são divididos em Classes de Problemas de acordo com o parâmetro que afeta o seu comportamento de forma significativa, são elas:</p>
+
 1. **Complexidade Constante**
 2. **Complexidade Linear**
 3. **Complexidade Logarítmica**
