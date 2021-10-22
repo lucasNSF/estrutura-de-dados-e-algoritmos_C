@@ -13,7 +13,7 @@ printf("Insira o tamanho do seu vetor: ");
 scanf("%d", &tamanho);
 
 int *vetor;
-vetor = (int *) malloc(sizeof(int * tamanho));
+vetor = (int *) malloc(sizeof(int) * tamanho);
 ```
 
 Veja que o código acima é diferente disso:
@@ -34,7 +34,7 @@ printf("Insira o tamanho do seu vetor: ");
 scanf("%d", &tamanho);
 
 int *vetor;
-vetor = (int *) malloc(sizeof(int * tamanho));
+vetor = (int *) malloc(sizeof(int) * tamanho);
 
 // Preenchendo o vetor normalmente
 for (int i = 0; i < tamanho; i++) {
@@ -51,12 +51,13 @@ printf("Insira o tamanho do seu vetor: ");
 scanf("%d", &tamanho);
 
 int *vetor;
-vetor = (int *) malloc(sizeof(int * tamanho));
+vetor = (int *) malloc(sizeof(int) * tamanho);
 
-printf("Insira outro tamanho para seu vetor: ");
-scanf("%d", &tamanho);
+int acrescimo;
+printf("Insira outro tamanho de acréscimo para seu vetor: ");
+scanf("%d", &acrescimo);
 
-vetor = (int *) realloc(sizeof(int * tamanho));
+vetor = (int *) realloc(y, sizeof(int) * (tamanho + acrescimo));
 ```
 
 Lembre-se que, ao finalizar seu programa, deve sempre liberar a memória que foi alocada para a lista:
