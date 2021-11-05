@@ -18,7 +18,7 @@
 - [ ] Algoritmos
 - [ ] Listas
 - [ ] Filas
-- [ ] Pilhas
+- [x] Pilhas
 - [ ] Árvores
 - [ ] Tabela Hash
 
