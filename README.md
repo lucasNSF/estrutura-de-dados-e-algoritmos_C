@@ -17,7 +17,7 @@
 ### Conteúdos do Repositório 📝
 - [ ] Algoritmos
 - [ ] Listas
-- [ ] Filas
+- [x] Filas
 - [x] Pilhas
 - [ ] Árvores
 - [ ] Tabela Hash
