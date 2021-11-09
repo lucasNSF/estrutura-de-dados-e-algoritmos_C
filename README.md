@@ -16,7 +16,7 @@
 
 ### Conteúdos do Repositório 📝
 - [ ] Algoritmos
-- [ ] Listas
+- [x] Listas
 - [x] Filas
 - [x] Pilhas
 - [ ] Árvores
