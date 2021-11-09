@@ -132,4 +132,4 @@ void imprimirPilha(No *topoDaPilha) {
 }
 ```
 
-Pronto! Agora você já tem uma base de como trabalhar com pilhas. Navegando pelo diretório você pode encontrar o arquivo `.c` com a estrutura de dados implementada. **Obrigado por ler até aqui!** 😄
+Pronto! Agora você já tem uma base de como trabalhar com pilhas. Navegando pelo diretório você pode encontrar o arquivo `.c` com a estrutura de dados implementada, outras formas de se implementar a estrutura de dados e exemplos práticos de uso de uma Pilha. **Obrigado por ler até aqui!** 😄
