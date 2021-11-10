@@ -283,3 +283,143 @@ No* buscarElemento(No **lista, int numero) {
 ## Lista Circular
 
 Uma lista circular caracteriza-se da seguinte forma: no último elemento da lista, o ponteiro para o próximo elemento irá apontar para o ínicio da lista. Dessa forma temos uma lista circular. É necessário ter cuidado ao realizar qualquer operação nessa lista para não cair em um loop infinito.
+
+### Inserir elemento no início
+
+```C
+void inserirInicio(Lista *lista, int numero) {
+    No *novo = (No *) malloc(sizeof(No));
+
+    if (novo) {
+        novo -> dado = numero;
+        novo -> prox = lista -> inicio;
+        lista -> inicio = novo;
+        if (lista -> fim == NULL)
+            lista -> fim = novo;
+        lista -> fim -> prox = lista -> inicio;
+        lista -> tamanho++;
+    } else {
+        puts("Sem memória suficiente!");
+    }
+}
+```
+
+### Inserir elemento no final
+
+```C
+void inserirFinal(Lista *lista, int numero) {
+    No *novo = (No *) malloc(sizeof(No));
+
+    if (novo) {
+        novo -> dado = numero;
+
+        if (lista -> inicio == NULL) {
+            lista -> inicio = novo;
+            lista -> fim = novo;
+            lista -> fim -> prox = lista -> inicio;
+        } else {
+            lista -> fim -> prox = novo;
+            lista -> fim = novo;
+            novo -> prox = lista -> inicio;
+        }
+        lista -> tamanho++;
+    } else {
+        puts("Sem memória suficiente!");
+    }
+}
+```
+
+### Inserir elemento ordenado
+
+```C
+void inserirOrdenado(Lista *lista, int numero) {
+    No *novo = (No *) malloc(sizeof(No));
+
+    if (novo) {
+        novo -> dado = numero;
+
+        if (lista -> inicio == NULL) {
+            inserirInicio(lista, numero);
+        }
+        else if (novo -> dado < lista -> inicio -> dado) {
+            inserirInicio(lista, numero);
+        }
+        else {
+            No *aux = lista -> inicio;
+            while (aux -> prox != lista -> inicio && novo -> dado > aux -> prox -> dado)
+                aux = aux -> prox;
+            if (aux -> prox == lista -> inicio)
+                inserirFinal(lista, numero);
+            else {
+                novo -> prox = aux -> prox;
+                aux -> prox = novo;
+                lista -> tamanho++;
+            }
+        }
+    } else {
+        puts("Sem memória suficiente!");
+    }
+}
+```
+
+### Remover elemento
+
+```C
+No* removerElemento(Lista *lista, int numero) {
+    No *excluir = NULL;
+
+    if (lista -> inicio) {
+        if (lista -> inicio == lista -> fim && lista -> inicio -> dado == numero) {
+            excluir = lista -> inicio;
+            lista -> inicio = NULL;
+            lista -> fim = NULL;
+            lista -> tamanho--;
+        }
+        else if (lista -> inicio -> dado == numero) {
+            excluir = lista -> inicio;
+            lista -> inicio = excluir -> prox;
+            lista -> fim -> prox = lista -> inicio;
+            lista -> tamanho--;
+        }
+        else {
+            No *aux = lista -> inicio;
+
+            while (aux -> prox != lista -> inicio && aux -> prox -> dado != numero)
+                aux = aux -> prox;
+            if (aux -> prox -> dado == numero) {
+                if (lista -> fim == aux -> prox) {
+                    excluir = aux -> prox;
+                    aux -> prox = excluir -> prox;
+                    lista -> fim = aux;
+                } else {
+                    excluir = aux -> prox;
+                    aux -> prox = excluir -> prox;
+                }
+                lista -> tamanho--;
+            }
+        }
+    }
+
+    return excluir;
+}
+```
+
+### Buscar elemento
+
+```C
+No* buscar(Lista *lista, int numero) {
+    if (lista -> inicio) {
+        No *aux = lista -> inicio;
+        
+        do {
+            if (aux -> dado == numero)
+                return aux;
+            aux = aux -> prox;
+        } while (aux != lista -> inicio);
+    }
+
+    return NULL;
+}
+```
+
+Pronto! Agora você já tem uma base de como trabalhar com listas. Navegando pelo diretório você pode encontrar o arquivo `.c` com a estrutura de dados implementada, outras formas de se implementar a estrutura de dados e exemplos práticos de uso de uma Lista. **Obrigado por ler até aqui!** 😄
